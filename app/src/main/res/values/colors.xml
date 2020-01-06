@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fafafa</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="book_title_color">@android:color/black</color>
+    <color name="book_description_color">#757575</color>
+    <color name="book_beforeOffPrice_color">#616161</color>
+</resources>

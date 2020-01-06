@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/image_book"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/text_book_price"
+        app:layout_constraintDimensionRatio="2:3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_book_off"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="@id/image_book"
+        app:layout_constraintTop_toTopOf="@id/image_book" />
+
+    <TextView
+        android:id="@+id/text_book_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/book_title_color"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/image_book"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="شب ظلمانی یلدا" />
+
+    <TextView
+        android:id="@+id/text_book_author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textColor="@color/book_description_color"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/text_book_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_book_title"
+        tools:text="رضا جولایی" />
+
+    <TextView
+        android:id="@+id/text_book_publisher"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/book_description_color"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/text_book_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_book_author"
+        tools:text="نشر چشمه" />
+
+    <RatingBar
+        android:id="@+id/ratingBar_book"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:stepSize="1.0"
+        app:layout_constraintEnd_toEndOf="@id/text_book_title"
+        app:layout_constraintTop_toBottomOf="@id/text_book_publisher"
+        tools:rating="3" />
+
+    <TextView
+        android:id="@+id/text_book_before_off_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingBar_book"
+        tools:text="9600 تومان" />
+
+    <TextView
+        android:id="@+id/text_book_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_book_before_off_price"
+        tools:text="7200 تومان" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
